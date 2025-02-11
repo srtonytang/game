@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#game-container {
+    width: 400px; /* 12*12格子的宽度 */
+    height: 400px; /* 12*12格子的高度 */
+    border: 1px solid #ccc;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    margin: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc; /* 没有揭开的格子是灰色 */
+}
+
+.revealed {
+    background-color: #c6efce; /* 已经揭开的格子是绿色 */
+}
+
+.marked {
+    background-color: #ffff00; /* 标记的格子是黄色 */
+}
+
+.mine {
+    background-color: #ff0000; /* 地雷是红色 */
+}
+
+@media (max-width: 768px) {
+    #game-container {
+        width: 300px;
+        height: 300px;
+        margin: 20px auto;
+    }
+    .cell {
+        width: 20px;
+        height: 20px;
+        margin: 1px;
+    }
+}
